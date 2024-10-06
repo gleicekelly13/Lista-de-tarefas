@@ -7,8 +7,9 @@ function handleKeyUp(e) {
         const newLi = document.createElement('li');
         newLi.innerHTML = input.value;
         lista.appendChild(newLi);
+
+        input.value = ''; //Limpa o que foi digitado no campo
     }
 }
 
 input.addEventListener('keyup', handleKeyUp);
-console.log(input.value)
