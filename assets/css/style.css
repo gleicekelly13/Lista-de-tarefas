@@ -42,3 +42,8 @@ h1 {
     color: #fff;
     font-size: 2rem;
 }
+
+.mudar-tema {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
