@@ -10,6 +10,7 @@ body {
     height: 100vh;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -25,4 +26,14 @@ body::before {
     background-size: cover;
     background-position: center;
     z-index: -1;
+}
+
+header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 1;
 }
