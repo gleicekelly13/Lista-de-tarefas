@@ -66,7 +66,6 @@ h1 {
     width: 100%;
     padding: 5px;
     border: none;
-    /*border-bottom: 2px solid #f1eeee; */
     font-size: 1rem;
     outline: none;
 }
@@ -75,10 +74,22 @@ main {
     background-color: #fff;
     width: 100%;
     max-width: 600px;
-    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     z-index: 1;
     position: relative;
     bottom: 1rem;
+}
+
+.lista-tarefa {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-tarefa li {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #e0e0e0;
 }
