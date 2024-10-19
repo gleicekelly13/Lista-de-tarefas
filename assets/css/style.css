@@ -84,7 +84,7 @@ main {
 .lista-tarefa {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .lista-tarefa li {
@@ -94,14 +94,12 @@ main {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.check {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.check input[type="checkbox"] {
+.lista-tarefa li input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;  /* Deixa o checkbox arredondado */
+    border: 2px solid #ccc;
     margin-right: 10px;
 }
-
 
