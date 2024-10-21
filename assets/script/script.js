@@ -1,5 +1,5 @@
 //Seleção dos elementos que serão manipulados
-const input = document.querySelector('input');
+const input = document.querySelector('#input-texto');
 const lista = document.querySelector('ul');
 
 
