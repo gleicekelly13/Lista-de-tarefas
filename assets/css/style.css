@@ -66,7 +66,6 @@ h1 {
 .input-tarefa {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .input-tarefa input[type='text'] {   
@@ -101,7 +100,7 @@ main {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.lista-tarefa li input[type="checkbox"] {
+.lista-tarefa li input[type="checkbox"], .input-tarefa input[type='checkbox'] {
     appearance: none; /* Remove o estilo padrão do checkbox */
     width: 20px;
     height: 20px;
