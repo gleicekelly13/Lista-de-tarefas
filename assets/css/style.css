@@ -63,9 +63,9 @@ h1 {
     
 }
 
-.input-tarefa {
+.input-tarefa {  /* Alinha os inputs que estão na mesma div */ 
     display: flex;
-    align-items: center;
+    align-items: center; /* Centraliza o checkbox e o campo de texto verticalmente */
 }
 
 .input-tarefa input[type='text'] {   
