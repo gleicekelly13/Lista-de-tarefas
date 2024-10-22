@@ -109,3 +109,18 @@ main {
     margin-right: 10px;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.filtros button, .limpar-concluidas {
+    border: none;
+    background: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #7c7979;
+    margin-right: 10px;
+}
