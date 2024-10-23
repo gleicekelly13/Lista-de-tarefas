@@ -107,6 +107,16 @@ main {
     border-radius: 50%;  /* Deixa o checkbox arredondado */
     border: 2px solid #ccc;
     margin-right: 10px;
+    position: relative;
+}
+
+.lista-tarefa li input[type="checkbox"]:checked {
+    background-color: #6200ea;
+    border-color: #6200ea;
+    background-image: url('/assets/images/icon-check.png') ;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 footer {
