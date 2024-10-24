@@ -1,6 +1,7 @@
 //Seleção dos elementos que serão manipulados
 const input = document.querySelector('#input-texto');
-const lista = document.querySelector('ul');
+const lista = document.querySelector('ul'); //Também seleciona os checkBoxes das tarefas
+const checkBoxPrincipal = document.querySelector('#check'); //* Seleciona o checkBox principal 
 
 
 function handleKeyUp(e) { //Função que lida com o evento de soltar uma tecla
@@ -22,5 +23,17 @@ function handleKeyUp(e) { //Função que lida com o evento de soltar uma tecla
     }
 }
 
-//Evento
+//Eventos
 input.addEventListener('keyup', handleKeyUp); //Adição do evento quando o usuário soltar a tecla
+
+// Adiciona um evento de clique ao checkbox principal
+checkBoxPrincipal.addEventListener('change', function() { //** 
+
+    // Pega todos os checkboxes dentro da lista de tarefas
+    const checkBoxesTarefas = lista.querySelectorAll('input[type="checkBox"]');
+
+    // Para cada checkbox de tarefa, marca/desmarca conforme o checkbox principal
+    checkBoxesTarefas.forEach(function(checkBoxTarefa) { //*** 
+        checkBoxTarefa.checked = checkBoxPrincipal.checked;
+    });
+});
