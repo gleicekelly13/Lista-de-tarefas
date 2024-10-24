@@ -110,7 +110,7 @@ main {
     position: relative;
 }
 
-.lista-tarefa li input[type="checkbox"]:checked {
+.lista-tarefa li input[type="checkbox"]:checked, .input-tarefa input[type='checkbox']:checked {
     background-color: #6200ea;
     border-color: #6200ea;
     background-image: url('/assets/images/icon-check.png') ;
