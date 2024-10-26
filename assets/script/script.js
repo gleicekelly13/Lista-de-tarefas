@@ -5,7 +5,7 @@ const checkBoxPrincipal = document.querySelector('#check'); //* Seleciona o chec
 
 
 function handleKeyUp(e) { //Função que lida com o evento de soltar uma tecla
-    if(e.key === 'Enter') { //Verifica se o usuário digitou a tecla 'Enter'
+    if(e.key === 'Enter' && input.value.trim() !== '') { //Verifica se o usuário digitou a tecla 'Enter' e se há texto digitado
         const newLi = document.createElement('li'); //Cria um novo elemento, neste caso, um novo item da lista, e armazena em newLi
 
         const checkbox = document.createElement('input'); //Cria o checkbox
