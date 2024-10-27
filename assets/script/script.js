@@ -13,11 +13,16 @@ function handleKeyUp(e) { //Função que lida com o evento de soltar uma tecla
 
         newLi.appendChild(checkbox); //Adiciona o checkbox ao item da lista
 
-        const texto_tarefa = document.createElement('span'); //Cria um elemento <span> para o texto da tarefa
+        checkbox.addEventListener('change', function () {  //Evento de alteração no checkbox
+            newLi.classList.toggle('concluida', checkbox.checked);  // Adiciona ou remove a classe 'concluida' no <li>
+        })
+
+        const texto_tarefa = document.createTextNode(input.value); //Cria o texto da tarefa
         texto_tarefa.innerHTML = input.value;
 
-        newLi.appendChild(texto_tarefa); //Adiciona o texto da tarefa ao item da lista
-        lista.appendChild(newLi); //Adiciona o item à lista
+        newLi.appendChild(checkbox);  // Adiciona o checkbox ao <li>
+        newLi.appendChild(texto_tarefa); //Adiciona o texto da tarefa ao item da lista <li>
+        lista.appendChild(newLi); //Adiciona o item<li> à lista
 
         input.value = ''; //Limpa o que foi digitado no campo de texto 
     }
@@ -36,4 +41,4 @@ checkBoxPrincipal.addEventListener('change', function() { //**
     checkBoxesTarefas.forEach(function(checkBoxTarefa) { //*** 
         checkBoxTarefa.checked = checkBoxPrincipal.checked;
     });
-});
+}); 

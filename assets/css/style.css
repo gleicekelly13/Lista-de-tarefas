@@ -119,6 +119,11 @@ main {
     background-position: center;
 }
 
+.concluida {
+    color: #7c7979;
+    text-decoration: line-through;
+}
+
 footer {
     display: flex;
     align-items: center;
