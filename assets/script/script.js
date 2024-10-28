@@ -31,14 +31,17 @@ function handleKeyUp(e) { //Função que lida com o evento de soltar uma tecla
 //Eventos
 input.addEventListener('keyup', handleKeyUp); //Adição do evento quando o usuário soltar a tecla
 
-// Adiciona um evento de clique ao checkbox principal
+// Adiciona um evento de mudança(change) ao checkbox principal para marcar/desmarcar todas as tarefas
 checkBoxPrincipal.addEventListener('change', function() { //** 
 
-    // Pega todos os checkboxes dentro da lista de tarefas
-    const checkBoxesTarefas = lista.querySelectorAll('input[type="checkBox"]');
+    // Seleciona todos os itens de tarefa dentro da lista de tarefas
+    const allTarefas = document.querySelectorAll('.lista-tarefa li');
+    
 
-    // Para cada checkbox de tarefa, marca/desmarca conforme o checkbox principal
-    checkBoxesTarefas.forEach(function(checkBoxTarefa) { //*** 
-        checkBoxTarefa.checked = checkBoxPrincipal.checked;
+    // Para cada item de tarefa, sincroniza o checkbox e marca/desmarca conforme o checkbox principal
+    allTarefas.forEach(tarefa => { //*** 
+        const checkBoxTarefa = tarefa.querySelector('input[type="checkbox"]');
+        checkBoxTarefa.checked = checkBoxPrincipal.checked;  // Marca/desmarca o checkbox da tarefa
+        tarefa.classList.toggle('concluida', checkBoxPrincipal.checked);  // Aplica ou remove a classe 'concluida'
     });
 }); 
